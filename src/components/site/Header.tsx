@@ -34,7 +34,7 @@ export function Header() {
           ))}
         </nav>
         <div className="hidden items-center gap-3 md:flex">
-          <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground">
+          <Link href="/coming-soon" className="text-sm text-muted-foreground hover:text-foreground">
             Sign in
           </Link>
           <Link
@@ -61,6 +61,13 @@ export function Header() {
                 {n.label}
               </Link>
             ))}
+            <Link
+              href="/coming-soon"
+              onClick={() => setOpen(false)}
+              className="rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
+            >
+              Sign in
+            </Link>
             <Link
               href="/contact"
               onClick={() => setOpen(false)}

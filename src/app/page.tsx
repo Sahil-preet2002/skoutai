@@ -31,8 +31,9 @@ export default function HomePage() {
             </div>
             <div className="md:col-span-4">
               <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-                Prospio is the unified data layer for modern revenue teams — 600M verified contacts,
-                real-time enrichment, intent signals and multi-channel outreach in one place.
+                Skout AI is the unified data layer for modern revenue teams — 600M verified
+                contacts, real-time enrichment, intent signals and multi-channel outreach in one
+                place.
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-3">
                 <Link
@@ -189,7 +190,7 @@ export default function HomePage() {
             <div className="md:col-span-8">
               <p className="font-display text-2xl sm:text-3xl leading-snug md:text-4xl">
                 Modern revenue teams glue together <GradientText>five vendors</GradientText> just to
-                ship one outbound play. We thought that was nuts — so we built Prospio as{" "}
+                ship one outbound play. We thought that was nuts — so we built Skout AI as{" "}
                 <span className="italic-serif">one connected system</span>, priced for results, not
                 seats.
               </p>
