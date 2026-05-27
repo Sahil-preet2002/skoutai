@@ -30,7 +30,7 @@ async function submitContact(data: ContactFormData) {
 }
 
 const contactCards = [
-  { icon: Mail, title: "Email", description: "hello@skoutai.io" },
+  { icon: Mail, title: "Email", description: "info@skoutai.io" },
   { icon: MessageSquare, title: "Live chat", description: "Mon – Fri · 9am – 7pm CET" },
   { icon: MapPin, title: "HQ", description: "Remote-first globally" },
 ];

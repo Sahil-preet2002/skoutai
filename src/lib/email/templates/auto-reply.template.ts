@@ -102,7 +102,7 @@ export function autoReplyTemplate(name: string): string {
               <p style="margin:0;color:#a1a1aa;font-size:12px;line-height:1.6;">
                 <a href="${appUrl}" style="color:#6366f1;text-decoration:none;">skoutai.io</a>
                 &nbsp;·&nbsp;
-                <a href="mailto:hello@skoutai.io" style="color:#6366f1;text-decoration:none;">hello@skoutai.io</a>
+                <a href="mailto:info@skoutai.io" style="color:#6366f1;text-decoration:none;">info@skoutai.io</a>
               </p>
               <p style="margin:12px 0 0;color:#d4d4d8;font-size:11px;">
                 You're receiving this because you submitted a contact form at skoutai.io

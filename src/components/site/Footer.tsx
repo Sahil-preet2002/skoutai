@@ -36,7 +36,7 @@ const socialLinks = [
     ),
   },
   {
-    href: "https://linkedin.com/in/yourprofile",
+    href: "https://www.linkedin.com/company/shoutai/",
     label: "LinkedIn",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-5 w-5">
