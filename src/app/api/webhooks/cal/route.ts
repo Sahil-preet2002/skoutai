@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import crypto from "crypto";
 import { connectDB } from "@/lib/db/connect";
 import Booking from "@/lib/models/booking.model";
 
@@ -6,7 +7,22 @@ export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
+    const bodyText = await req.text();
+    const signature = req.headers.get("x-cal-signature-256") || req.headers.get("X-Cal-Signature-256");
+    const webhookSecret = process.env.CAL_WEBHOOK_SECRET;
+
+    // Verify webhook signature if secret is defined
+    if (webhookSecret && signature) {
+      const hmac = crypto.createHmac("sha256", webhookSecret);
+      hmac.update(bodyText);
+      const computedSignature = hmac.digest("hex");
+      if (computedSignature !== signature) {
+        console.warn("[cal-webhook] Signature verification failed");
+        return NextResponse.json({ error: "Invalid signature" }, { status: 401 });
+      }
+    }
+
+    const body = JSON.parse(bodyText);
     const triggerEvent = body.triggerEvent || body.event;
     const payload = body.payload || {};
 
